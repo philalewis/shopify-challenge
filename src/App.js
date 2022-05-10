@@ -9,9 +9,10 @@ const App = () => {
 
   const sendPrompt = (prompt) => {
     getNewResponse(prompt)
-    .then(data => setResponses([ ...responses, {
+    .then(data => setResponses([ {
       prompt: prompt, response: data.choices[0].text
-    } ]))
+      }, ...responses
+    ]))
   }
 
   return (
