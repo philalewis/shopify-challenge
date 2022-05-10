@@ -1,0 +1,23 @@
+.response-header {
+  margin: 1rem 0;
+}
+
+.responses {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.response-card {
+  background-color: #eeeeee;
+  border-radius: 5px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+h4, p {
+  margin: 0;
+}

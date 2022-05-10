@@ -1,4 +1,5 @@
 import React from 'react'
+import './Response.css'
 
 const Response = ({ responses }) => {
   const buildResponses = () => {
@@ -14,8 +15,10 @@ const Response = ({ responses }) => {
 
   return (
     <section>
-      <h2>Responses</h2>
-      { buildResponses() }
+      <h2 className="response-header">Responses</h2>
+      <div className="responses">
+        { buildResponses() }
+      </div>
     </section>
   )
 }
