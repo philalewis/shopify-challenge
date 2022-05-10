@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import Form from './Form'
 import Response from './Response'
@@ -17,8 +17,11 @@ const App = () => {
 
   return (
     <main>
-      <Form sendPrompt={sendPrompt} />
-      <Response responses={responses} />
+      <div className="main-container">
+        <h1>Fun with AI</h1>
+        <Form sendPrompt={sendPrompt} />
+        <Response responses={responses} />
+      </div>
     </main>
   )
 }
