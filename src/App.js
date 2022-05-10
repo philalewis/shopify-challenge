@@ -17,7 +17,8 @@ const App = () => {
 
   return (
     <main>
-      <Form sendPrompt={sendPrompt}/>
+      <Form sendPrompt={sendPrompt} />
+      <Response responses={responses} />
     </main>
   )
 }
