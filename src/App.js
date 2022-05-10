@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import Form from './Form'
 import Response from './Response'
-import { sendPrompt } from './apiCalls'
+import { getNewResponse } from './apiCalls'
 
 const App = () => {
   const [ responses, setResponses ] = useState([])
@@ -11,9 +11,13 @@ const App = () => {
   //   sendPrompt('Suggest one name for a horse.')
   // }, [])
 
+  const sendPrompt = (prompt) => {
+    getNewResponse(prompt)
+  }
+
   return (
     <main>
-      <Form />
+      <Form sendPrompt={sendPrompt}/>
     </main>
   )
 }

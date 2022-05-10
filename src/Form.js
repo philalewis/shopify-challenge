@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = () => {
+const Form = ({ sendPrompt }) => {
   const [ input, setInput ] = useState('')
 
   const handleChange = event => {
@@ -8,9 +8,19 @@ const Form = () => {
     setInput(event.target.value)
   }
 
+  const sendForm = () => {
+    sendPrompt(input)
+    setInput('')
+  }
+
   return (
     <form>
-      <input type="text" onChange={event => handleChange(event)} value={input} />
+      <input
+        type="text"
+        onChange={event => handleChange(event)}
+        value={input}
+      />
+      <button onClick={sendForm}>Submit</button>
     </form>
   )
 }

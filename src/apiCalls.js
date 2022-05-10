@@ -1,8 +1,8 @@
 const API_KEY = process.env.REACT_APP_API_KEY
 
-export const sendPrompt = prompt => {
+export const getNewResponse = prompt => {
     const data = {
-      prompt: "Write a poem about a dog wearing skis",
+      prompt: prompt,
       temperature: 0.5,
     }
     
