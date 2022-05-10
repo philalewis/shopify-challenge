@@ -6,7 +6,7 @@ export const getNewResponse = prompt => {
       temperature: 0.5,
     }
     
-    fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
+    return fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -15,7 +15,6 @@ export const getNewResponse = prompt => {
       body: JSON.stringify(data),
     })
     .then(response => response.json())
-    .then(data => console.log(data))
   }
 
   // max_tokens: 64,

@@ -8,7 +8,8 @@ const Form = ({ sendPrompt }) => {
     setInput(event.target.value)
   }
 
-  const sendForm = () => {
+  const sendForm = event => {
+    event.preventDefault()
     sendPrompt(input)
     setInput('')
   }
@@ -20,7 +21,7 @@ const Form = ({ sendPrompt }) => {
         onChange={event => handleChange(event)}
         value={input}
       />
-      <button onClick={sendForm}>Submit</button>
+      <button onClick={event => sendForm(event)}>Submit</button>
     </form>
   )
 }

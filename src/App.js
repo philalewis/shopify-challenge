@@ -7,12 +7,11 @@ import { getNewResponse } from './apiCalls'
 const App = () => {
   const [ responses, setResponses ] = useState([])
 
-  // useEffect(() => {
-  //   sendPrompt('Suggest one name for a horse.')
-  // }, [])
-
   const sendPrompt = (prompt) => {
     getNewResponse(prompt)
+    .then(data => setResponses([ ...responses, {
+      prompt: prompt, response: data.choices[0].text
+    } ]))
   }
 
   return (
