@@ -17,14 +17,19 @@ const Form = ({ sendPrompt }) => {
 
   return (
     <form>
-      <h3>Enter Prompt</h3>
-      <input
-        type="text"
+      <h3 className="prompt">Enter Prompt</h3>
+      <textarea
         className="text-input"
         onChange={event => handleChange(event)}
         value={input}
-      />
-      <button onClick={event => sendForm(event)}>Submit</button>
+        rows="4"
+        cols="50"
+      ></textarea>
+      <button
+        className="submit-form"
+        onClick={event => sendForm(event)}>
+        Submit
+      </button>
     </form>
   )
 }
