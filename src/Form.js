@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Form.css'
 
 const Form = ({ sendPrompt }) => {
   const [ input, setInput ] = useState('')
@@ -16,8 +17,10 @@ const Form = ({ sendPrompt }) => {
 
   return (
     <form>
+      <h3>Enter Prompt</h3>
       <input
         type="text"
+        className="text-input"
         onChange={event => handleChange(event)}
         value={input}
       />
