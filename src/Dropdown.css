@@ -1,0 +1,6 @@
+select {
+  width: 10rem;
+  height: 1.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}

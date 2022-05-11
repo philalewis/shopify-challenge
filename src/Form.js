@@ -27,12 +27,14 @@ const Form = ({ sendPrompt }) => {
         rows="4"
         cols="50"
       ></textarea>
+      <div className="dropdown-button-container">
         <Dropdown setEngine={setEngine}/>
         <button
           className="submit-form"
           onClick={event => sendForm(event)}>
           Submit
         </button>
+      </div>
     </form>
   )
 }
