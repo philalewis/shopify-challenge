@@ -1,7 +1,6 @@
 const API_KEY = process.env.REACT_APP_API_KEY
 
 export const getNewResponse = (prompt, engine) => {
-  console.log(engine)
   const data = {
     prompt: prompt,
     temperature: 0.5,

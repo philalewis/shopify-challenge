@@ -19,14 +19,16 @@ const Form = ({ sendPrompt }) => {
 
   return (
     <form>
-      <h3 className="prompt">Enter Prompt</h3>
-      <textarea
-        className="text-input"
-        onChange={event => handleChange(event)}
-        value={input}
-        rows="4"
-        cols="50"
-      ></textarea>
+      <label className="prompt">
+        Enter Prompt
+        <textarea
+          className="text-input"
+          onChange={event => handleChange(event)}
+          value={input}
+          rows="4"
+          cols="50"
+        ></textarea>
+      </label>
       <div className="dropdown-button-container">
         <Dropdown setEngine={setEngine}/>
         <button
