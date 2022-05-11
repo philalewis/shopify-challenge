@@ -5,8 +5,13 @@ const ErrorModal = ({ modalMessage, setModalMessage }) => {
   return (
     <div className="modal">
       <section className="modal-box">
-        <p>Whoops! Something went wrong.</p>
-        <button onClick={() => setModalMessage('')}>OK</button>
+        <div className="error-message-container">
+          <p>Whoops! Something went wrong.</p>
+        </div>
+        <button
+          className="modal-button"
+          onClick={() => setModalMessage('')}>OK
+        </button>
       </section>
     </div>
   )

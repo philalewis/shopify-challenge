@@ -10,7 +10,7 @@ export const getNewResponse = prompt => {
     presence_penalty: 0.0,
   }
   
-  return fetch("https://api.openai.com/v1/engines/text-curie-001/completion", {
+  return fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -21,12 +21,12 @@ const App = () => {
   return (
     <main>
       <div className="main-container">
-        <h1>Fun with AI</h1>
         { modalMessage.length > 0 &&
         <ErrorModal
-          modalMessage={modalMessage}
-          setModalMessage={setModalMessage}
+        modalMessage={modalMessage}
+        setModalMessage={setModalMessage}
         />}
+        <h1>Fun with AI</h1>
         <Form sendPrompt={sendPrompt} />
         <Response responses={responses} />
       </div>

@@ -8,7 +8,8 @@
   height: 100%;
   background-color: rgba(0,0,0,0.4);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-box {
@@ -18,4 +19,27 @@
   justify-content: center;
   background-color: white;
   padding: 2rem;
+  width: 50%;
+  height: 20%;
+  overflow-y: auto;
+  bottom: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.error-message-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.modal-button {
+  align-self: flex-end;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: white;
 }
