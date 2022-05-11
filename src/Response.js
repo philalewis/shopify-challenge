@@ -6,9 +6,9 @@ const Response = ({ responses }) => {
     return responses.map((response, i) => {
       return <article key={i} className="response-card">
         <h4>Prompt: </h4>
-        <p>{response.prompt}</p>
+        <p className="prompt-value">{response.prompt}</p>
         <h4>Response: </h4>
-        <p>{response.response.trim()}</p>
+        <p className="response-value">{response.response.trim()}</p>
       </article>
     })
   }
