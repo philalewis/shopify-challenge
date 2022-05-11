@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import './Form.css'
+import Dropdown from './Dropdown'
 
 const Form = ({ sendPrompt }) => {
   const [ input, setInput ] = useState('')
+  const [ engine, setEngine ] = useState('text-curie-001')
 
   const handleChange = event => {
     event.preventDefault()
@@ -25,11 +27,12 @@ const Form = ({ sendPrompt }) => {
         rows="4"
         cols="50"
       ></textarea>
-      <button
-        className="submit-form"
-        onClick={event => sendForm(event)}>
-        Submit
-      </button>
+        <Dropdown setEngine={setEngine}/>
+        <button
+          className="submit-form"
+          onClick={event => sendForm(event)}>
+          Submit
+        </button>
     </form>
   )
 }

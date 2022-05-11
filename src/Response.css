@@ -16,6 +16,7 @@
   grid-template-columns: 1fr 5fr;
   gap: 1rem;
   margin: 1rem 0;
+  white-space: pre-line
 }
 
 h4, p {
