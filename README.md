@@ -11,7 +11,7 @@ The overall goal of this challenge was to utilize the [GPT-3](https://beta.opena
 The user can type instructions for an AI machine into a text input field and click a submit button to get a response from the AI. Responses are shown below the form in order of newest to oldest. An extra feature was added to allow the user to choose which AI machine they would like to use from a dropdown menu.
 
 ## View Site
-You can visit the deployed site [here]().
+You can visit the deployed site [here](https://fun-with-ai.herokuapp.com/).
 
 ## Screenshots
 <img width="1439" alt="Screen Shot 2022-05-11 at 11 08 50 AM" src="https://user-images.githubusercontent.com/65195952/167907519-68e9b914-cd47-4e80-a258-26bd572fea82.png">
