@@ -1,7 +1,6 @@
 const API_KEY = process.env.REACT_APP_API_KEY
 
 export const getNewResponse = (prompt, engine) => {
-  console.log(engine)
   const data = {
     prompt: prompt,
     temperature: 0.5,
@@ -20,6 +19,7 @@ export const getNewResponse = (prompt, engine) => {
     if (!response.ok) {
       throw new Error(response.message)
     } else {
+      console.log(response)
       return response.json()
     }
   })
