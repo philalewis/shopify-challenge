@@ -10,7 +10,7 @@ export const getNewResponse = prompt => {
     presence_penalty: 0.0,
   }
   
-  return fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
+  return fetch("https://api.openai.com/v1/engines/text-curie-001/completion", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,5 +18,11 @@ export const getNewResponse = prompt => {
     },
     body: JSON.stringify(data),
   })
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(response.message)
+    } else {
+      return response.json()
+    }
+  })
 }
