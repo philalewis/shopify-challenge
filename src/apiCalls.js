@@ -19,6 +19,7 @@ export const getNewResponse = (prompt, engine) => {
     if (!response.ok) {
       throw new Error(response.message)
     } else {
+      console.log(response)
       return response.json()
     }
   })
