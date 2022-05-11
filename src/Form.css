@@ -5,14 +5,14 @@ form {
 }
 
 .prompt {
-  font-size: 1rem;
-  margin: 1rem 0;
+  font-size: 0.9rem;
+  margin: 1rem 0 .3rem 0;
 }
 
 .text-input {
-  width: 100%;
+  width: 100% - 5px;
   height: 6rem;
-  padding: 0;
+  padding: 5px;
 }
 
 .submit-form {
