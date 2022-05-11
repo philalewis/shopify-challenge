@@ -13,7 +13,7 @@ const Form = ({ sendPrompt }) => {
 
   const sendForm = event => {
     event.preventDefault()
-    sendPrompt(input)
+    sendPrompt(input, engine)
     setInput('')
   }
 
