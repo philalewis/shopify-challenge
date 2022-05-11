@@ -1,16 +1,14 @@
 const API_KEY = process.env.REACT_APP_API_KEY
 
-export const getNewResponse = prompt => {
+export const getNewResponse = (prompt, engine) => {
+  console.log(engine)
   const data = {
     prompt: prompt,
     temperature: 0.5,
-    max_tokens: 64,
-    top_p: 1.0,
-    frequency_penalty: 0.0,
-    presence_penalty: 0.0,
+    max_tokens: 64
   }
   
-  return fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
+  return fetch(`https://api.openai.com/v1/engines/${engine}/completions`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

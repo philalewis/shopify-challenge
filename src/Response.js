@@ -8,7 +8,7 @@ const Response = ({ responses }) => {
         <h4>Prompt: </h4>
         <p>{response.prompt}</p>
         <h4>Response: </h4>
-        <p>{response.response}</p>
+        <p>{response.response.trim()}</p>
       </article>
     })
   }

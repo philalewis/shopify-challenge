@@ -15,8 +15,13 @@ form {
   padding: 5px;
 }
 
+.dropdown-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .submit-form {
-  align-self: flex-end;
   width: 6rem;
   height: 2.5rem;
   margin: 1rem 0;

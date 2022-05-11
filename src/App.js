@@ -9,8 +9,8 @@ const App = () => {
   const [ responses, setResponses ] = useState([])
   const [ modalMessage, setModalMessage ] = useState('')
 
-  const sendPrompt = (prompt) => {
-    getNewResponse(prompt)
+  const sendPrompt = (prompt, engine) => {
+    getNewResponse(prompt, engine)
     .then(data => setResponses([ {
       prompt: prompt, response: data.choices[0].text
       }, ...responses
